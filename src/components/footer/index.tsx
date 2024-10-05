@@ -19,7 +19,7 @@ const Footer = () => {
                         <Link href="https://linkedin.com/in/lademir-junior" target="_blank" rel="noopener noreferrer">
                             <Linkedin className="w-6 h-6" />
                         </Link>
-                        <Link href={""}>
+                        <Link href={"http://lattes.cnpq.br/6689216065999798"}>
                             <Image src={theme === 'dark' ? LattesWhite : LattesBlack} alt="Lattes" width={24} height={24} />
                         </Link>
                     </div>
