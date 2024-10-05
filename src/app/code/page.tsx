@@ -28,6 +28,7 @@ export default function GitHubRepos() {
                 setRepos(data);
                 setLoading(false);
             } catch (err) {
+                console.log(err);
                 setError('Erro ao carregar repositórios');
                 setLoading(false);
             }
