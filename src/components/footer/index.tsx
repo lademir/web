@@ -3,11 +3,21 @@ import { Github, Linkedin } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import LattesBlack from '../../../assets/lattes-black.png';
 import LattesWhite from '../../../assets/lattes-white.png';
 
 const Footer = () => {
     const { theme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return null;
+    }
 
     return (
         <footer className="bg-background text-foreground py-8">
@@ -21,7 +31,7 @@ const Footer = () => {
                             <Linkedin className="w-6 h-6" />
                         </Link>
                         <Link href={"http://lattes.cnpq.br/6689216065999798"}>
-                            <Image src={theme === 'light' ? LattesBlack : LattesWhite} alt="Lattes" width={24} height={24} />
+                            <Image src={theme === 'dark' ? LattesWhite : LattesBlack} alt="Lattes" width={24} height={24} />
                         </Link>
                     </div>
                     <p className="text-center text-sm md:text-base">lademirjunior@gmail.com</p>

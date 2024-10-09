@@ -2,7 +2,7 @@ import CvCard from './components/cv-card';
 
 export default function Curriculum() {
     // redirect('/');
-    const UnderCertificate = "/documento.pdf";
+    const isProduction = process.env.NODE_ENV === 'production';
     return (
         <div className="max-w-4xl mx-auto p-8 bg-background text-foreground">
             <header className="mb-8 text-center">
@@ -22,8 +22,8 @@ export default function Curriculum() {
                             "Graduation with average 8.91.",
                         ]}
                         links={[
-                            { link: "/TCC_Lademir_ultima.pdf", linkText: "Thesis" },
-                            { link: "/historico-oficial.pdf", linkText: "History" }
+                            { link: isProduction ? "/web/TCC_Lademir_ultima.pdf" : "/TCC_Lademir_ultima.pdf", linkText: "Thesis" },
+                            { link: isProduction ? "/web/historico-oficial.pdf" : "/historico-oficial.pdf", linkText: "History" }
                         ]}
                     />
                 </section>
@@ -62,7 +62,7 @@ export default function Curriculum() {
                             "Technologies: Vite.js, Django, Docker, C++,  OpenStreet Routing Machine, Celery and PuLP."
                         ]}
                         links={[
-                            { link: UnderCertificate, linkText: "Certificate" }
+                            { link: isProduction ? "/web/documento.pdf" : "/documento.pdf", linkText: "Certificate" }
                         ]}
                     />
 
