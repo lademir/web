@@ -10,8 +10,14 @@
         "content": "I graduated in Computer Science from the Federal University of Viçosa (UFV)."
     },
     {
+        "title": "I presented my undergraduate thesis!",
+        "date": "Sep 2024",
+        "content": "I presented my undergraduate thesis with keywords such as project scheduling, simulated annealing, genetic algorithms, and metaheuristics. You can access the thesis in the curriculum section."
+    },
+    {
         "title": "Selected for the Undergraduate Research Scholarship PIBIC/CNPq at Federal University of Viçosa",
         "date": "Aug 2023",
         "content": "I was selected for the Undergraduate Research Scholarship PIBIC/CNPq at Federal University of Viçosa, with the research theme 'Tools for efficient resolution and integrated visualization of multi-component routing problems'."
     }
+    
 ]

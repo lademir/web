@@ -18,7 +18,8 @@ const geistMono = localFont({
 
 const navItems = [
   { nome: 'Home', link: '/' },
-  { nome: 'Code', link: '/code' },
+  { nome: 'News', link: '/news' },
+  // { nome: 'Code', link: '/code' },
   { nome: 'Curriculum', link: '/curriculum' },
 ];
 
@@ -43,8 +44,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
           disableTransitionOnChange
         >
           <Navbar itens={navItems} />
