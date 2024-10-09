@@ -1,3 +1,4 @@
+import { Progress } from '@/components/ui/progress';
 import CvCard from './components/cv-card';
 
 export default function Curriculum() {
@@ -104,8 +105,27 @@ export default function Curriculum() {
                     />
                 </section>
 
+                <section className="mt-8">
+                    <h2 className="text-2xl font-semibold mb-6 border-b border-foreground/20 pb-2">Languages</h2>
+                    <ul className="space-y-6">
+                        <li>
+                            <div className="flex justify-between items-center mb-2">
+                                <span className="font-medium">Portuguese</span>
+                                <span className="text-sm text-foreground/70">Native</span>
+                            </div>
+                            <Progress value={100} className="h-2" />
+                        </li>
+                        <li>
+                            <div className="flex justify-between items-center mb-2">
+                                <span className="font-medium">English</span>
+                                <span className="text-sm text-foreground/70">Fluent</span>
+                            </div>
+                            <Progress value={90} className="h-2" />
+                        </li>
 
-                <section>
+                    </ul>
+                </section>
+                {/* <section>
                     <h2 className="text-2xl font-semibold mb-4 border-b border-foreground/20 pb-2">Habilidades</h2>
                     <ul className="grid grid-cols-2 gap-2">
                         <li className="bg-foreground/10 rounded-full px-3 py-1 text-sm">JavaScript</li>
@@ -117,7 +137,7 @@ export default function Curriculum() {
                         <li className="bg-foreground/10 rounded-full px-3 py-1 text-sm">SQL</li>
                         <li className="bg-foreground/10 rounded-full px-3 py-1 text-sm">Git</li>
                     </ul>
-                </section>
+                </section> */}
             </main>
         </div>
     );
